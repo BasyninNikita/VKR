@@ -74,11 +74,7 @@ class Connection():
         self.http_conn.getresponse()
 
 class SendThread(threading.Thread):
-
-    """
-    Thread to send data to remote host
-    """
-    
+"""Thread to send data to remote host"""
     def __init__(self, client, connection):
         threading.Thread.__init__(self, name="Send-Thread")
         self.client = client
@@ -115,11 +111,7 @@ class SendThread(threading.Thread):
         return self._stop.isSet()
 
 class ReceiveThread(threading.Thread):
-
-    """
-    Thread to receive data from remote host
-    """
-
+    """Thread to receive data from remote host"""
     def __init__(self, client, connection):
         threading.Thread.__init__(self, name="Receive-Thread")
         self.client = client
@@ -152,7 +144,6 @@ class ReceiveThread(threading.Thread):
 class ClientWorker(object):
 
     def __init__(self, socket, remote_addr, target_addr, proxy_addr):
-        #threading.Thread.__init__(self)
         self.socket = socket
         self.remote_addr = remote_addr 
         self.target_addr = target_addr
