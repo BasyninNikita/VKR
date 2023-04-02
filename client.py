@@ -10,7 +10,7 @@ import sys
 import base64
 
 BUFFER = 1024 * 50
-key = base64.b64encode(b'***:***').decode('ascii')
+key = base64.b64encode(b'tun.key:tun.crt').decode('ascii')
 
 class Connection():
     
