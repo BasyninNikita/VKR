@@ -184,5 +184,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Start Tunnel Server")
     parser.add_argument("-p", default=8443, dest='port', help='Specify port number server will listen to', type=int)
     args = parser.parse_args()
-    key = base64.b64encode(b'***:***').decode('ascii')
+    key = base64.b64encode(b'tun.key:tun.crt').decode('ascii')
     run_server(args.port)
